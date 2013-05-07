@@ -1,0 +1,28 @@
+<p><%= link_to "Back", "/babys" %></p>
+
+<div class="center hero-unit">
+	<h1>Your Offer</h1>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Experience</th>
+				<th>When</th>
+				<th>How Long (in hours)</th>
+				<th>Phone</th>
+				<th>Notes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @offers.name %></td>
+				<td><%= @offers.experience %></td>
+				<td><%= @offers.when %></td>
+				<td><%= @offers.howlong %></td>
+				<td><%= @offers.phone %></td>
+				<td><%= @offers.notes %></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,43 @@
+<p><%= link_to "Back", "/babys" %></p>
+
+<div class="center hero-unit">
+	<h1>New</h1>
+
+	<%= form_tag "/babys" do %>
+		<p>
+			<%= label_tag :name, "Name" %>
+			<%= text_field_tag :name, "", size: 80, placeholder: "Enter your name here" %>
+		</p>
+
+		<p>
+			<%= label_tag :experience, "Experience babysitting? Yes=true, No=false" %>
+			<%= text_field_tag :experience, "", size: 80, placeholder: "True or false" %>
+		</p>
+
+		<p>
+			<%= label_tag :when, "When" %>
+			<%= text_field_tag :when, "", size: 80, placeholder: "Enter what dates and times you are available" %>
+		</p>
+
+		<p>
+			<%= label_tag :howlong, "How Long (in hours)" %>
+			<%= text_field_tag :howlong, "", size: 80, placeholder: "Enter the number of hours you can babysit" %>
+		</p>
+
+		<p>
+			<%= label_tag :phone, "Phone #" %>
+			<%= text_field_tag :phone, "", size: 80, placeholder: "No dashes e.g. 3106141180" %> 
+
+		</p>
+
+		<p>
+			<%= label_tag :notes, "Notes" %>
+			<%= text_field_tag :notes, "", size: 80, placeholder: "Enter any additional notes" %> 
+
+		</p>
+
+		<%= submit_tag "Create a New Offer" %>
+
+	<% end %>
+
+</div>

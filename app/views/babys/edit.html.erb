@@ -1,0 +1,43 @@
+<p><%= link_to "Back", "/babys" %></p>
+
+<div class="center hero-unit">
+	<h1>Edit</h1>
+
+	<%= form_tag "/babys/#{@offers.id}", method: 'put' do %>
+		<p>
+			<%= label_tag :name, "Name" %>
+			<%= text_field_tag :name, "", size: 80, placeholder: @offers.name %>
+		</p>
+
+		<p>
+			<%= label_tag :experience, "Experience" %>
+			<%= text_field_tag :experience, "", size: 80, placeholder: @offers.experience %>
+		</p>
+
+		<p>
+			<%= label_tag :when, "When" %>
+			<%= text_field_tag :when, "", size: 80, placeholder: @offers.when %>
+		</p>
+
+		<p>
+			<%= label_tag :howlong, "How Long (in hours)" %>
+			<%= text_field_tag :howlong, "", size: 80, placeholder: @offers.howlong %>
+		</p>
+
+		<p>
+			<%= label_tag :phone, "Phone #" %>
+			<%= text_field_tag :phone, "", size: 80, placeholder: @offers.phone %> 
+
+		</p>
+
+		<p>
+			<%= label_tag :notes, "Notes" %>
+			<%= text_field_tag :notes, "", size: 80, placeholder: @offers.notes %> 
+
+		</p>
+
+		<%= submit_tag "Update Offer" %>
+
+	<% end %>
+
+</div>

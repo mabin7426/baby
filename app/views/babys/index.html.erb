@@ -1,0 +1,37 @@
+<div class="center hero-unit">
+
+	<h1>Clare, here are your babysitting offers </h1>
+	<h2>:D</h2>
+
+	<p><%= link_to "Create a New Offer", "/babys/new" %></p>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>Name</th>
+				<th>Experience</th>
+				<th>When</th>
+				<th>How Long (in hours)</th>
+				<th>Phone</th>
+				<th>Notes</th>
+			</tr>
+		</thead>
+		<tbody>
+		<%= @offers.each do |offers| %>
+			<tr>
+				<td><%= link_to "Delete", "/babys/#{offers.id}", method: 'delete', data: { confirm: "Are you sure you want to delete this offer?" } %></td>
+				<td><%= link_to "Edit", "/babys/#{offers.id}/edit" %></td>
+
+				<td><%= link_to offers.name, "/babys/#{offers.id}"%></td>
+				<td><%= link_to offers.experience, "/babys/#{offers.id}"%></td>
+				<td><%= link_to offers.when, "/babys/#{offers.id}"%></td>
+				<td><%= link_to offers.howlong, "/babys/#{offers.id}"%></td>
+				<td><%= link_to offers.phone, "/babys/#{offers.id}"%></td>
+				<td><%= link_to offers.notes, "/babys/#{offers.id}"%></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
